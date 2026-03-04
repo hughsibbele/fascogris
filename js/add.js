@@ -1,4 +1,10 @@
 (() => {
+  const ALL_TAGS = [
+    'vegetarian', 'quick', 'one-pot', 'sheet-pan', 'instant-pot',
+    'slow-cook', 'soup/stew', 'pasta', 'rice', 'curry', 'casserole',
+    'crowd-pleaser'
+  ];
+
   // Tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -12,6 +18,7 @@
   const statusEl = document.getElementById('status');
   const previewEl = document.getElementById('preview');
   const previewForm = document.getElementById('preview-form');
+  const previewTagsEl = document.getElementById('preview-tags');
   const photoInput = document.getElementById('photo-input');
   const photoSubmit = document.getElementById('photo-submit');
 
@@ -25,6 +32,18 @@
     statusEl.style.display = 'block';
   }
   function hideStatus() { statusEl.style.display = 'none'; }
+
+  // Render tag checkboxes
+  function renderTagCheckboxes(selectedTags) {
+    const selected = new Set(selectedTags || []);
+    previewTagsEl.innerHTML = ALL_TAGS.map(tag =>
+      `<label><input type="checkbox" name="tags" value="${tag}"${selected.has(tag) ? ' checked' : ''}>${tag}</label>`
+    ).join('');
+  }
+
+  function getSelectedTags() {
+    return Array.from(previewTagsEl.querySelectorAll('input:checked')).map(cb => cb.value);
+  }
 
   // Resize image to max 1500px, return base64
   function resizeImage(file) {
@@ -107,6 +126,7 @@
       ingredients: [{ group: null, items: fd.get('ingredients').split('\n').map(s => s.trim()).filter(Boolean) }],
       instructions: [{ group: null, items: fd.get('instructions').split('\n').map(s => s.trim()).filter(Boolean) }],
       source: fd.get('source'),
+      tags: [],
     };
     showPreview(recipe);
   });
@@ -148,6 +168,7 @@
     f.ingredients.value = groupsToText(recipe.ingredients || []);
     f.instructions.value = groupsToText(recipe.instructions || []);
     f.source.value = recipe.source || '';
+    renderTagCheckboxes(recipe.tags);
     previewEl.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -182,6 +203,7 @@
       ingredients: textToGroups(fd.get('ingredients')),
       instructions: textToGroups(fd.get('instructions')),
       source: fd.get('source').trim(),
+      tags: getSelectedTags(),
       dateAdded: new Date().toISOString().slice(0, 10),
       password,
     };

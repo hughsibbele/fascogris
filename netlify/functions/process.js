@@ -9,9 +9,11 @@ Return ONLY valid JSON matching this schema (no markdown, no explanation):
   "description": "string or empty",
   "ingredients": [{ "group": "string or null", "items": ["string"] }],
   "instructions": [{ "group": "string or null", "items": ["string"] }],
-  "source": "string or empty"
+  "source": "string or empty",
+  "tags": ["string"]
 }
-Use null for group when there's no subgroup. Keep ingredient/instruction text clean and concise.`;
+Use null for group when there's no subgroup. Keep ingredient/instruction text clean and concise.
+For "tags", pick ALL that apply from this exact list: vegetarian, quick, one-pot, sheet-pan, instant-pot, slow-cook, soup/stew, pasta, rice, curry, casserole, crowd-pleaser.`;
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {

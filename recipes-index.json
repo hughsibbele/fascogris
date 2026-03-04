@@ -3,228 +3,410 @@
     "slug": "arroz-con-pollo",
     "title": "Arroz con Pollo",
     "yield": "6-8 servings",
-    "time": "45 minutes"
+    "time": "45 minutes",
+    "tags": [
+      "one-pot",
+      "rice",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "beef-bourguignon",
     "title": "Beef Bourguignon",
     "yield": "6 servings",
-    "time": "3-4 hours (mostly inactive)"
+    "time": "3-4 hours (mostly inactive)",
+    "tags": [
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "bulgarian-pepper-casserole",
     "title": "Bulgarian Pepper Casserole",
     "yield": "6-8 servings",
-    "time": "1.5 hours"
+    "time": "1.5 hours",
+    "tags": [
+      "vegetarian",
+      "rice",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "chana-masala",
     "title": "Chana Masala (Instant Pot)",
     "yield": "6 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "vegetarian",
+      "instant-pot",
+      "curry"
+    ]
   },
   {
     "slug": "chicken-and-dumplings",
     "title": "Chicken and Dumplings",
     "yield": "6-8 servings",
-    "time": "2 hours"
+    "time": "2 hours",
+    "tags": [
+      "one-pot",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "chicken-marbella",
     "title": "Chicken Marbella",
     "yield": "10+ portions",
-    "time": ""
+    "time": "",
+    "tags": [
+      "one-pot",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "chicken-monterey",
     "title": "Chicken Monterey",
     "yield": "4 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "one-pot",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "chicken-pot-pie",
     "title": "Chicken Pot Pie",
     "yield": "6-8 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "one-pot",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "chicken-tikka-masala",
     "title": "Chicken Tikka Masala (Instant Pot)",
     "yield": "6 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "instant-pot",
+      "curry",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "coq-au-vin",
     "title": "Coq au Vin",
     "yield": "6 servings",
-    "time": "2.5 hours"
+    "time": "2.5 hours",
+    "tags": [
+      "one-pot",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "crawfish-etouffe",
     "title": "Crawfish Étouffé",
     "yield": "6-8 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "one-pot",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "doro-wat",
     "title": "Doro Wat (Ethiopian Chicken Stew)",
     "yield": "6 servings",
-    "time": "2 hours"
+    "time": "2 hours",
+    "tags": [
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "feijoada",
     "title": "Feijoada (Brazilian Black Bean Stew)",
     "yield": "8-10 servings",
-    "time": "3-4 hours, plus overnight soaking"
+    "time": "3-4 hours, plus overnight soaking",
+    "tags": [
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "gado-gado",
     "title": "Gado Gado",
     "yield": "6 servings",
-    "time": "1 hour"
+    "time": "1 hour",
+    "tags": [
+      "vegetarian",
+      "rice",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "good-soup",
     "title": "Good Soup",
     "yield": "",
-    "time": ""
+    "time": "",
+    "tags": [
+      "vegetarian",
+      "soup/stew",
+      "curry",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "greek-orzo-casserole",
     "title": "Greek Orzo Casserole",
     "yield": "",
-    "time": ""
+    "time": "",
+    "tags": [
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "grilled-chicken-dijon",
     "title": "Grilled Chicken with Dijon and Herb Marinade",
     "yield": "4-6 servings",
-    "time": "15 mins + marinating"
+    "time": "15 mins + marinating",
+    "tags": [
+      "quick",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "hughs-chili",
     "title": "Hugh's Chili",
     "yield": "A very large pot",
-    "time": "9-13 hours (mostly inactive)"
+    "time": "9-13 hours (mostly inactive)",
+    "tags": [
+      "one-pot",
+      "slow-cook",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "hungarian-goulash",
     "title": "Hungarian Goulash",
     "yield": "6 servings",
-    "time": "3 hours"
+    "time": "3 hours",
+    "tags": [
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "jambalaya",
     "title": "Jambalaya",
     "yield": "6-8 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "one-pot",
+      "rice",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "japanese-curry",
     "title": "Japanese Curry",
     "yield": "6 servings",
-    "time": "1 hour"
+    "time": "1 hour",
+    "tags": [
+      "curry",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "jollof-rice",
     "title": "Jollof Rice (Ghanaian-Style)",
     "yield": "6-8 servings",
-    "time": "1.5 hours"
+    "time": "1.5 hours",
+    "tags": [
+      "rice",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "lasagna",
     "title": "Lasagna",
     "yield": "8 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "pasta",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "mac-and-cheese",
     "title": "Macaroni and Cheese for a Crowd",
     "yield": "10-12 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "vegetarian",
+      "pasta",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "moroccan-chicken-tagine",
     "title": "Moroccan Chicken Tagine",
     "yield": "4-6 servings",
-    "time": "1.5 hours"
+    "time": "1.5 hours",
+    "tags": [
+      "one-pot",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "moussaka",
     "title": "Moussaka",
     "yield": "8 servings",
-    "time": "2 hours"
+    "time": "2 hours",
+    "tags": [
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "pastitsio",
     "title": "Pastitsio (Greek Pasta Bake)",
     "yield": "8-10 servings",
-    "time": "1.5 hours"
+    "time": "1.5 hours",
+    "tags": [
+      "one-pot",
+      "pasta",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "pork-and-ham-loaf",
     "title": "Pork and Ham Loaf with Sweet Mustard Glaze",
     "yield": "6-8 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "pozole-rojo",
     "title": "Pozole Rojo",
     "yield": "8-10 servings",
-    "time": "3-4 hours"
+    "time": "3-4 hours",
+    "tags": [
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "sausage-ragout",
     "title": "Sausage Ragout",
     "yield": "6 portions",
-    "time": ""
+    "time": "",
+    "tags": [
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "shakshuka",
     "title": "Shakshuka",
     "yield": "4 servings",
-    "time": "30 minutes"
+    "time": "30 minutes",
+    "tags": [
+      "vegetarian",
+      "quick",
+      "one-pot",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "sheet-pan-sausage-peppers",
     "title": "Sheet Pan Sausage and Peppers",
     "yield": "4 servings",
-    "time": "45 minutes"
+    "time": "45 minutes",
+    "tags": [
+      "one-pot",
+      "sheet-pan",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "shepherds-pie",
     "title": "Shepherd's Pie",
     "yield": "6 servings",
-    "time": "1 hour 15 minutes"
+    "time": "1 hour 15 minutes",
+    "tags": [
+      "one-pot",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "succotash",
     "title": "Succotash",
     "yield": "8 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "tamale-pie",
     "title": "Tamale Pie",
     "yield": "6 servings",
-    "time": "1 hour 15 minutes"
+    "time": "1 hour 15 minutes",
+    "tags": [
+      "one-pot",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "tomato-basil-butter-beans",
     "title": "Tomato Basil Butter Beans",
     "yield": "2 servings",
-    "time": "10 minutes"
+    "time": "10 minutes",
+    "tags": [
+      "vegetarian",
+      "quick",
+      "one-pot"
+    ]
   },
   {
     "slug": "turkey-tetrazzini",
     "title": "Turkey Tetrazzini",
     "yield": "5-6 servings",
-    "time": ""
+    "time": "",
+    "tags": [
+      "pasta",
+      "casserole",
+      "crowd-pleaser"
+    ]
   },
   {
     "slug": "white-chili",
     "title": "White Chili",
     "yield": "",
-    "time": ""
+    "time": "",
+    "tags": [
+      "one-pot",
+      "soup/stew",
+      "crowd-pleaser"
+    ]
   }
 ]

@@ -6,13 +6,14 @@
   --sand: #f0ebe3;
   --warm-gray: #6b6560;
   --charcoal: #2d2926;
-  --brick: #a0522d;
+  --brick: #9a5a3a;
   --brick-light: #c4835a;
   --sage: #7a8b6f;
+  --olive: #7a7a5a;
   --font-body: 'Source Serif 4', Georgia, serif;
-  --font-display: system-ui, -apple-system, sans-serif;
+  --font-display: 'DM Sans', system-ui, -apple-system, sans-serif;
   --radius: 6px;
-  --max-w: 640px;
+  --max-w: 900px;
 }
 
 html { font-size: 17px; }
@@ -75,6 +76,55 @@ header p {
   border-color: var(--brick-light);
 }
 
+/* === Tag Pills === */
+.tag-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-bottom: 0.75rem;
+}
+.tag-pill {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1.5px solid #d5cfc7;
+  border-radius: 1rem;
+  background: transparent;
+  color: var(--warm-gray);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+.tag-pill:hover {
+  border-color: var(--olive);
+  color: var(--olive);
+}
+.tag-pill.active {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fff;
+}
+.tag-pill-sm {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  background: var(--sand);
+  color: var(--warm-gray);
+  margin-right: 0.2rem;
+  margin-top: 0.2rem;
+}
+.recipe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+}
+
 /* === Recipe List === */
 .recipe-list {
   list-style: none;
@@ -84,10 +134,13 @@ header p {
   border-bottom: 1px solid #e8e3dc;
 }
 .recipe-list a {
+  display: block;
+  padding: 0.7rem 0.2rem;
+}
+.recipe-list .title-row {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0.7rem 0.2rem;
   gap: 0.5rem;
 }
 .recipe-list .title {
@@ -104,6 +157,17 @@ header p {
   padding: 2rem 0;
   text-align: center;
   color: var(--warm-gray);
+}
+
+@media (min-width: 768px) {
+  .recipe-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.5rem;
+  }
+  .recipe-list .no-results {
+    grid-column: 1 / -1;
+  }
 }
 
 /* === Recipe Page === */
@@ -131,6 +195,18 @@ header p {
   font-size: 0.95rem;
 }
 
+.recipe-body {
+  display: block;
+}
+@media (min-width: 768px) {
+  .recipe-body {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+}
+
 .recipe-section h3 {
   font-family: var(--font-display);
   font-size: 1.1rem;
@@ -138,6 +214,14 @@ header p {
   margin: 1.25rem 0 0.5rem;
   padding-bottom: 0.25rem;
   border-bottom: 1.5px solid #e8e3dc;
+}
+@media (min-width: 768px) {
+  .recipe-body .recipe-section:first-child h3 {
+    margin-top: 0;
+  }
+  .recipe-body .recipe-section:last-child h3 {
+    margin-top: 0;
+  }
 }
 .recipe-section h4 {
   font-family: var(--font-display);
@@ -261,6 +345,35 @@ body.cook-mode .recipe-section ul li {
 .form-group textarea {
   min-height: 100px;
   resize: vertical;
+}
+
+/* Tag checkboxes in add/edit forms */
+.tag-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.tag-checkboxes label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1.5px solid #d5cfc7;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+.tag-checkboxes label:has(input:checked) {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fff;
+}
+.tag-checkboxes input[type="checkbox"] {
+  display: none;
 }
 
 .btn {

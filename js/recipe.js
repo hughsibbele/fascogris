@@ -9,9 +9,27 @@
   const editFormWrap = document.getElementById('edit-form-wrap');
   const editForm = document.getElementById('edit-form');
   const editStatus = document.getElementById('edit-status');
+  const editTagsEl = document.getElementById('edit-tags');
   let wakeLock = null;
   let currentRecipe = null;
   let savedPassword = '';
+
+  const ALL_TAGS = [
+    'vegetarian', 'quick', 'one-pot', 'sheet-pan', 'instant-pot',
+    'slow-cook', 'soup/stew', 'pasta', 'rice', 'curry', 'casserole',
+    'crowd-pleaser'
+  ];
+
+  function renderEditTags(selectedTags) {
+    const selected = new Set(selectedTags || []);
+    editTagsEl.innerHTML = ALL_TAGS.map(tag =>
+      `<label><input type="checkbox" name="tags" value="${tag}"${selected.has(tag) ? ' checked' : ''}>${tag}</label>`
+    ).join('');
+  }
+
+  function getEditTags() {
+    return Array.from(editTagsEl.querySelectorAll('input:checked')).map(cb => cb.value);
+  }
 
   fetch(`recipes/${slug}.json`)
     .then(res => { if (!res.ok) throw new Error(); return res.json(); })
@@ -46,11 +64,14 @@
 
   // --- Render recipe ---
   function render(r) {
-    document.title = `${r.title} — Fascogris`;
+    document.title = `${r.title} — fascogris`;
 
     const meta = [r.yield, r.time].filter(Boolean);
     const metaHtml = meta.length
       ? `<div class="recipe-meta">${meta.map(m => `<span>${m}</span>`).join('')}</div>`
+      : '';
+    const tagsHtml = r.tags && r.tags.length
+      ? `<div class="recipe-tags">${r.tags.map(t => `<span class="tag-pill-sm">${t}</span>`).join('')}</div>`
       : '';
     const descHtml = r.description
       ? `<p class="recipe-description">${r.description}</p>`
@@ -76,15 +97,18 @@
       <div class="recipe-header">
         <h2>${r.title}</h2>
         ${metaHtml}
+        ${tagsHtml}
       </div>
       ${descHtml}
-      <div class="recipe-section">
-        <h3>Ingredients</h3>
-        ${ingHtml}
-      </div>
-      <div class="recipe-section">
-        <h3>Instructions</h3>
-        ${insHtml}
+      <div class="recipe-body">
+        <div class="recipe-section">
+          <h3>Ingredients</h3>
+          ${ingHtml}
+        </div>
+        <div class="recipe-section">
+          <h3>Instructions</h3>
+          ${insHtml}
+        </div>
       </div>
       ${sourceHtml}
       <button class="btn btn-secondary" id="edit-btn" style="margin-top:1rem">Edit Recipe</button>
@@ -131,6 +155,7 @@
     editForm.ingredients.value = groupsToText(r.ingredients || []);
     editForm.instructions.value = groupsToText(r.instructions || []);
     editForm.source.value = r.source || '';
+    renderEditTags(r.tags);
   }
 
   document.getElementById('edit-cancel').addEventListener('click', () => {
@@ -152,6 +177,7 @@
       ingredients: textToGroups(fd.get('ingredients')),
       instructions: textToGroups(fd.get('instructions')),
       source: fd.get('source').trim(),
+      tags: getEditTags(),
       dateAdded: currentRecipe.dateAdded,
       password: savedPassword,
     };
