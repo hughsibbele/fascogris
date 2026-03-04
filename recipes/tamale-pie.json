@@ -1,0 +1,43 @@
+{
+  "slug": "tamale-pie",
+  "title": "Tamale Pie",
+  "yield": "6 servings",
+  "time": "1 hour 15 minutes",
+  "description": "A classic American comfort food casserole with a savory, chili-like ground beef filling topped with a fluffy, baked cornmeal crust.",
+  "ingredients": [
+    {
+      "group": "For the Filling",
+      "items": [
+        "1.5 lbs lean ground beef",
+        "1 large onion & 1 green bell pepper, chopped",
+        "3 cloves garlic, minced",
+        "1 (15 oz) can tomato sauce & 1 (15 oz) can diced tomatoes",
+        "1 (4 oz) can diced green chiles",
+        "1 cup corn & 1 cup shredded cheddar cheese",
+        "2-3 tbsp chili powder, 1 tsp cumin, 1 tsp salt"
+      ]
+    },
+    {
+      "group": "For the Topping",
+      "items": [
+        "3/4 cup yellow cornmeal",
+        "1/2 tsp salt",
+        "2 cups cold water",
+        "1 tbsp butter"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Preheat oven to 375°F.",
+        "Filling: Brown beef with onion and pepper. Drain fat. Add garlic. Stir in tomatoes, chiles, corn, and spices. Simmer 15-20 mins until thick. Stir in cheese. Pour into a 9x9 baking dish.",
+        "Topping: Whisk cornmeal, salt, and cold water in a saucepan. Bring to a boil, whisking, until very thick. Stir in butter.",
+        "Spoon topping over filling. Bake for 35-40 minutes until bubbly and golden. Rest 10 minutes before serving."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

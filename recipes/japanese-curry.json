@@ -1,0 +1,45 @@
+{
+  "slug": "japanese-curry",
+  "title": "Japanese Curry",
+  "yield": "6 servings",
+  "time": "1 hour",
+  "description": "The heart of Japanese curry is the roux, providing a characteristic thickness and savory, slightly sweet flavor. This recipe shows how to make it from scratch for a deeper flavor.",
+  "ingredients": [
+    {
+      "group": "For the Roux",
+      "items": [
+        "1/2 cup unsalted butter",
+        "3/4 cup all-purpose flour",
+        "2 tbsp curry powder, 1 tbsp garam masala, 1 tsp turmeric"
+      ]
+    },
+    {
+      "group": "For the Curry",
+      "items": [
+        "2 tbsp vegetable oil",
+        "1.5 lbs chicken or beef, cubed",
+        "2 large onions, sliced",
+        "2 large carrots, chunked",
+        "1 lb potatoes, chunked",
+        "6 cups chicken or beef stock",
+        "1 tbsp soy sauce, 1 tbsp Worcestershire sauce, 1 tbsp ketchup",
+        "1 Fuji apple, peeled and grated"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Make Roux: Melt butter over low heat. Whisk in flour. Cook, stirring, for 20-30 minutes until milk chocolate brown. Remove from heat, stir in spices.",
+        "Make Curry: Season and brown meat in oil in a Dutch oven. Remove. Cook onions until caramelized.",
+        "Add carrots, potatoes, and meat back to pot. Add stock, bring to a simmer, cover, and cook 20 mins.",
+        "Add soy sauce, Worcestershire, ketchup, and grated apple.",
+        "Incorporate Roux: Whisk 1 cup of hot broth into the roux to form a smooth slurry. Pour slurry back into the main pot, stirring.",
+        "Simmer uncovered for 15-20 minutes until thickened. Serve over rice."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

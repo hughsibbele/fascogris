@@ -1,0 +1,48 @@
+{
+  "slug": "arroz-con-pollo",
+  "title": "Arroz con Pollo",
+  "yield": "6-8 servings",
+  "time": "45 minutes",
+  "description": "A classic dish throughout Latin America, this one-pot meal is pure comfort. The key is to create a flavorful sofrito base and to allow the rice to absorb all the chicken and vegetable flavors as it cooks. Using bone-in chicken thighs results in the most flavor and moisture.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "2 lbs bone-in, skin-on chicken thighs",
+        "Salt and freshly ground black pepper",
+        "1 tsp cumin",
+        "1 tsp smoked paprika",
+        "3 tbsp olive oil",
+        "1 large yellow onion, finely chopped",
+        "1 green bell pepper, finely chopped",
+        "1 red bell pepper, finely chopped",
+        "4 cloves garlic, minced",
+        "1 (8-ounce) can tomato sauce",
+        "2 cups medium or long-grain white rice",
+        "4 cups low-sodium chicken broth",
+        "1 large pinch of saffron threads (optional, for color and flavor)",
+        "1 cup frozen peas, thawed",
+        "1/2 cup pimiento-stuffed green olives",
+        "1/4 cup chopped fresh cilantro, for garnish"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Pat the chicken thighs dry with paper towels. Season generously on all sides with salt, pepper, cumin, and paprika.",
+        "In a large Dutch oven or heavy-bottomed pot with a lid, heat the olive oil over medium-high heat. Place the chicken thighs skin-side down and sear until the skin is golden brown and crisp, about 5-7 minutes. Flip and sear the other side for 4-5 minutes. Remove chicken to a plate; it will not be cooked through.",
+        "Reduce heat to medium. Add the chopped onion and bell peppers to the pot, scraping up any browned bits from the chicken. Cook, stirring occasionally, until softened, about 8 minutes. Add the minced garlic and cook for one minute more until fragrant.",
+        "Stir in the tomato sauce and cook for a minute. Add the rice and stir constantly for about 2 minutes to toast the grains and coat them in the sofrito.",
+        "Pour in the chicken broth and add the saffron threads, if using. Bring to a boil, then reduce the heat to low.",
+        "Nestle the seared chicken thighs back into the rice. Cover the pot and let it simmer gently for 20-25 minutes, without lifting the lid.",
+        "After 20 minutes, check the rice. If it is tender and the liquid is absorbed, it's done. If not, cover and cook for another 5-10 minutes.",
+        "Scatter the peas and olives over the top of the rice, cover, and let stand off the heat for 5-10 minutes.",
+        "Fluff the rice gently with a fork. Serve immediately, garnished with fresh cilantro."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

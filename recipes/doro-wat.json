@@ -1,0 +1,40 @@
+{
+  "slug": "doro-wat",
+  "title": "Doro Wat (Ethiopian Chicken Stew)",
+  "yield": "6 servings",
+  "time": "2 hours",
+  "description": "A cornerstone of Ethiopian cuisine. The process is a labor of love, starting with slowly cooking a large amount of onions. Key ingredients are *Berbere* spice and *Niter Kibbeh* (spiced butter).",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "4 large red onions (about 2 lbs), finely chopped",
+        "1/2 cup Niter Kibbeh (or ghee/oil)",
+        "1/4 cup Berbere spice blend",
+        "2 tbsp tomato paste",
+        "1 inch ginger, grated",
+        "4 cloves garlic, minced",
+        "2 lbs bone-in, skin-on chicken pieces",
+        "1 tbsp lemon juice",
+        "Salt to taste",
+        "2-3 cups chicken stock or water",
+        "4-6 hard-boiled eggs, peeled",
+        "Injera, for serving"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Prep Chicken: Pierce chicken, toss with lemon juice and salt. Set aside.",
+        "Cook Onions: In a Dutch oven, cook chopped onions over medium-low heat *without oil* until they break down into a deep golden paste (45-60 mins).",
+        "Build Sauce: Add Niter Kibbeh and cook for 5 mins. Stir in Berbere and cook for 5 mins until fragrant. Stir in tomato paste, ginger, and garlic; cook 2-3 mins.",
+        "Cook Stew: Add chicken to the pot, stirring to coat. Cook for 5 mins. Pour in 2 cups stock, season with salt. Simmer, covered, for 45-60 mins until chicken is tender.",
+        "Finish: Gently add peeled hard-boiled eggs to the stew. Cover and heat through for 5-10 mins. Serve hot with Injera."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

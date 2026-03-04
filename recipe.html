@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe — Fascogris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><a href="/">Fascogris</a></h1>
+    </header>
+    <a href="/" class="back-link">← All Recipes</a>
+    <div id="recipe-content"></div>
+
+    <!-- Edit form (hidden by default) -->
+    <div id="edit-section" style="display:none">
+      <div id="edit-gate">
+        <div class="form-group">
+          <label>Family password</label>
+          <input type="password" id="edit-password" placeholder="Enter password">
+        </div>
+        <button class="btn btn-primary" id="edit-unlock">Unlock</button>
+      </div>
+      <div id="edit-form-wrap" style="display:none">
+        <h3 style="margin:0.5rem 0">Edit Recipe</h3>
+        <form class="preview-form" id="edit-form">
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title" required>
+          </div>
+          <div class="form-group">
+            <label>Yield</label>
+            <input type="text" name="yield">
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <input type="text" name="time">
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea name="description" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Ingredients (one per line; "## Group Name" for groups)</label>
+            <textarea name="ingredients" rows="10" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Instructions (one step per line; "## Group Name" for groups)</label>
+            <textarea name="instructions" rows="10" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Source</label>
+            <input type="text" name="source">
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <button type="button" class="btn btn-secondary" id="edit-cancel" style="margin-left:0.5rem">Cancel</button>
+        </form>
+        <div id="edit-status" class="status-msg" style="display:none"></div>
+      </div>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="/">Browse</a>
+      <a href="add.html">+ Add Recipe</a>
+    </nav>
+  </div>
+  <button class="cook-toggle" id="cook-toggle" style="display:none">Cook Mode</button>
+  <script src="js/recipe.js"></script>
+</body>
+</html>

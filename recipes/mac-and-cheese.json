@@ -1,0 +1,37 @@
+{
+  "slug": "mac-and-cheese",
+  "title": "Macaroni and Cheese for a Crowd",
+  "yield": "10-12 servings",
+  "time": "",
+  "description": "An easy, basic mac 'n' cheese that is simple enough for a side dish but tasty enough to be a main course.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "1½ pounds dried pasta elbow twists",
+        "2 cans (12 oz each) evaporated milk",
+        "2 tbsp hot pepper sauce",
+        "1 pound sharp cheddar cheese, grated",
+        "8 ounces Monterey Jack cheese, grated",
+        "1 cup freshly grated Parmesan cheese",
+        "1/2 cup soft, fresh bread crumbs",
+        "4 tbsp unsalted butter, melted"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Preheat oven to 400°F. Butter a 4.5-quart baking dish. Cook pasta until just tender. Drain.",
+        "Simmer evaporated milk and hot sauce.",
+        "Return pasta to pot. Stir in milk mixture. Gradually add cheddar, Monterey Jack, and 1/2 cup Parmesan.",
+        "Transfer to baking dish.",
+        "Mix remaining Parmesan and bread crumbs. Sprinkle over pasta. Drizzle with melted butter.",
+        "Bake for 30 minutes until lightly browned. Rest 5 minutes before serving."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "lasagna",
+  "title": "Lasagna",
+  "yield": "8 servings",
+  "time": "",
+  "description": "Classic layered lasagna with a rich meat sauce and creamy ricotta filling.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "1 tbsp olive oil & 1 lb ground beef",
+        "1 large onion, chopped & 2 cloves garlic, minced",
+        "1 (28 oz) can crushed tomatoes & 2 (6 oz) cans tomato paste",
+        "1/2 cup water & 2 tbsp sugar (optional)",
+        "1½ tsp dried basil & 1 tsp Italian seasoning",
+        "12 lasagna noodles, uncooked",
+        "16 ounces ricotta cheese & 1 large egg",
+        "1/2 cup grated Parmesan cheese",
+        "4 cups shredded mozzarella cheese"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Meat Sauce: Heat oil, brown beef and onion. Drain fat. Add garlic. Stir in tomatoes, paste, water, sugar, and seasonings. Simmer, covered, for at least 30 minutes.",
+        "Ricotta Mixture: Combine ricotta, egg, and Parmesan.",
+        "Noodles: Cook noodles according to package directions.",
+        "Assemble: Preheat oven to 375°F. In a 9x13 dish, layer sauce, noodles, ricotta, and mozzarella. Repeat. Finish with noodles, sauce, and mozzarella.",
+        "Bake: Cover with foil and bake 25 mins. Uncover and bake 20-25 more mins. Rest 10-15 mins before slicing."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

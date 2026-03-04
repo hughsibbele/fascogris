@@ -1,0 +1,45 @@
+{
+  "slug": "coq-au-vin",
+  "title": "Coq au Vin",
+  "yield": "6 servings",
+  "time": "2.5 hours",
+  "description": "A classic French braise of chicken slowly cooked in red wine. Using a good quality, full-bodied red wine like a Burgundy is key. This dish is even better when made a day ahead.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "4 ounces diced pancetta or thick-cut bacon",
+        "8 bone-in, skin-on chicken thighs",
+        "Salt and freshly ground black pepper",
+        "1 large yellow onion, chopped",
+        "2 large carrots, peeled and chopped",
+        "8 ounces cremini mushrooms, quartered",
+        "4 cloves garlic, minced",
+        "1/4 cup Cognac or brandy",
+        "1 bottle (750 ml) dry, full-bodied red wine",
+        "1-2 cups chicken broth",
+        "1 tbsp tomato paste",
+        "1 bay leaf & several sprigs of fresh thyme",
+        "2 tbsp unsalted butter, softened & 3 tbsp all-purpose flour",
+        "Fresh parsley, chopped, for garnish"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "In a Dutch oven, cook pancetta until crisp. Remove pancetta, leaving fat.",
+        "Pat chicken dry, season, and brown well in the fat. Remove chicken.",
+        "Add onion, carrots, and mushrooms; cook until softened. Add garlic and cook for 1 minute.",
+        "Pour in Cognac, scraping up browned bits. Stir in tomato paste, then the wine, bay leaf, and thyme. Bring to a boil.",
+        "Return chicken and pancetta to the pot. Add broth to almost cover. Simmer, covered, for 1.5 to 2 hours, until chicken is tender.",
+        "Mash softened butter and flour to a paste (*beurre manié*).",
+        "Remove chicken to a platter. Whisk the paste into the simmering sauce until it thickens.",
+        "Discard bay leaf and thyme. Adjust seasoning. Pour sauce over chicken, garnish with parsley, and serve."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

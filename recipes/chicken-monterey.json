@@ -1,0 +1,43 @@
+{
+  "slug": "chicken-monterey",
+  "title": "Chicken Monterey",
+  "yield": "4 servings",
+  "time": "",
+  "description": "A fricassee where chicken is partially cooked in oil and then finished in a liquid of orange juice, tomatoes, and chicken stock with garlic and rosemary.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "5 tbsp best-quality olive oil",
+        "1 chicken, 2½ to 3 pounds, quartered",
+        "Salt and freshly ground black pepper",
+        "1 cup finely chopped yellow onions",
+        "2 carrots, peeled and chopped",
+        "4 garlic cloves, peeled and minced",
+        "1 cup chicken stock",
+        "1/2 cup fresh orange juice",
+        "1/2 cup canned crushed tomatoes",
+        "1 tbsp fresh rosemary",
+        "1 medium-size red bell pepper, julienned",
+        "1/2 large zucchini & 1/2 large yellow squash, sliced",
+        "1/4 cup chopped fresh parsley, for garnish",
+        "Grated zest of 1 orange, for garnish"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Heat 3 tbsp oil in a large skillet. Season chicken and cook for 5 minutes per side until pale gold. Remove chicken.",
+        "Add onions, carrots, and garlic to skillet, cover, and cook until tender, about 25 minutes.",
+        "Uncover and add stock, orange juice, tomatoes, and rosemary. Simmer uncovered for 15 minutes.",
+        "Return chicken to the pan and simmer until nearly done, 30-35 minutes, basting and turning once.",
+        "Heat remaining 2 tbsp oil in another skillet. Sauté pepper for 5 minutes. Add zucchini and squash, season, and toss until tender-firm, about 5 more minutes.",
+        "Serve chicken with sauce, garnished with the sautéed vegetables, parsley, and orange zest."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

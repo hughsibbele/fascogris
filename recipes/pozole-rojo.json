@@ -1,0 +1,34 @@
+{
+  "slug": "pozole-rojo",
+  "title": "Pozole Rojo",
+  "yield": "8-10 servings",
+  "time": "3-4 hours",
+  "description": "An iconic, soul-warming stew from Mexico. The heart of Pozole is hominy and a rich broth made from pork and a purée of rehydrated dried chiles.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "8-10 dried Guajillo chiles & 2-3 dried Ancho chiles",
+        "3 lbs pork shoulder, cubed",
+        "1 lb pork neck bones",
+        "1 large white onion, halved & 1 head of garlic, halved",
+        "2 large (25 oz) cans of white hominy, drained and rinsed",
+        "1 tbsp dried Mexican oregano",
+        "Garnishes: Shredded lettuce, radishes, diced onion, cilantro, lime wedges, tostadas"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Cook Pork: In a large stockpot, cover pork shoulder, neck bones, onion, and garlic with water. Boil, skim, then simmer for 2-2.5 hours until pork is tender.",
+        "Make Chile Sauce: Toast dried chiles in a dry skillet until fragrant. Soak in hot water for 30 minutes. Blend softened chiles with 1/2 onion, 4 cloves garlic, and 1 cup soaking liquid until smooth. Strain through a fine-mesh sieve.",
+        "Combine: Remove pork from pot; shred when cool. Discard onion and garlic from broth. Pour strained chile sauce into the broth. Stir in hominy, shredded pork, and oregano. Simmer for at least 30-45 minutes. Season with salt.",
+        "Serve hot with all the garnishes."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

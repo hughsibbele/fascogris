@@ -1,0 +1,41 @@
+{
+  "slug": "gado-gado",
+  "title": "Gado Gado",
+  "yield": "6 servings",
+  "time": "1 hour",
+  "description": "An Indonesian extravaganza. Yellow rice on a bed of spinach, covered with vegetables, tofu, and hardboiled eggs, with a gingery peanut sauce drizzled over the top.",
+  "ingredients": [
+    {
+      "group": "Assembly",
+      "items": [
+        "1 bed of fresh spinach",
+        "1 cup rice cooked in 3 cups water with 1/2 tsp turmeric (Yellow Rice)",
+        "Assorted vegetables (steamed broccoli, green beans, shredded cabbage, carrots, sprouts)",
+        "1 block firm tofu, cubed and fried or baked",
+        "4 hardboiled eggs, sliced"
+      ]
+    },
+    {
+      "group": "Peanut Sauce",
+      "items": [
+        "1 cup creamy peanut butter",
+        "1 heaping Tbs. grated ginger & 1 heaping Tbs. minced garlic",
+        "3 Tbs. brown sugar & 1½ cups hot water",
+        "4 Tbs. cider vinegar & 2 Tbs. soy sauce",
+        "1 tsp. salt & Crushed red pepper to taste"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Assemble: On a platter, create a bed of spinach. Top with yellow rice, then arrange vegetables, tofu, and eggs over the rice.",
+        "Make Peanut Sauce: Combine all sauce ingredients in a blender and purée until smooth.",
+        "Serve the platter with the peanut sauce on the side for guests to drizzle over their portions."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

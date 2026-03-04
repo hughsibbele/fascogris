@@ -1,0 +1,47 @@
+{
+  "slug": "chicken-tikka-masala",
+  "title": "Chicken Tikka Masala (Instant Pot)",
+  "yield": "6 servings",
+  "time": "",
+  "description": "While chicken tikka is Indian, the masala sauce is a British manifestation. This version is made easy in the Instant Pot.",
+  "ingredients": [
+    {
+      "group": "For the Marinade",
+      "items": [
+        "1/2 cup Greek Yogurt",
+        "4 garlic cloves, minced",
+        "2 tsp minced ginger",
+        "1/2 tsp ground turmeric & 1/4 tsp cayenne",
+        "1/2 tsp smoked paprika & 1 tsp salt",
+        "1/2 tsp Garam Masala & 1/2 tsp cumin",
+        "1½ pounds boneless, skinless chicken, cut into pieces"
+      ]
+    },
+    {
+      "group": "For the Sauce & Finishing",
+      "items": [
+        "1 onion, chopped & 1 (14-oz) can diced tomatoes",
+        "1 carrot, chopped & 5 garlic cloves, minced",
+        "2 tsp minced ginger & 1 tsp turmeric",
+        "1/2 tsp cayenne & 1 tsp paprika",
+        "1 tsp salt & 2 tsp Garam Masala & 1 tsp cumin",
+        "1/2 cup half-and-half or cream",
+        "1/4 to ½ cup chopped fresh cilantro"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Marinate: In a large bowl, mix all marinade ingredients. Add chicken and stir to coat. Marinate for 1 to 2 hours.",
+        "Cook: In the Instant Pot, mix all sauce ingredients (onion through cumin). Place the chicken with yogurt on top.",
+        "Lock lid. Select Manual, High pressure, for 10 minutes. Quick release pressure.",
+        "Remove chicken and set aside. Use an immersion blender to purée the sauce.",
+        "Finish: Stir half-and-half and 1 tsp garam masala into the sauce. Return chicken to the sauce. Garnish with cilantro and serve."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

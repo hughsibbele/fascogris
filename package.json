@@ -1,0 +1,13 @@
+{
+  "name": "fascogris",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "migrate": "node scripts/migrate.js",
+    "build": "node scripts/build-index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}

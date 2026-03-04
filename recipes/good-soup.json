@@ -1,0 +1,40 @@
+{
+  "slug": "good-soup",
+  "title": "Good Soup",
+  "yield": "",
+  "time": "",
+  "description": "A simple, puréed vegetable soup with a curry flavor. From a handwritten note dated 1/7/24.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "4 tbsp butter",
+        "2 medium onions, diced",
+        "1 red bell pepper, diced",
+        "2 tbsp (or to taste) best-quality curry powder",
+        "8 cups best-quality broth",
+        "1 lb carrots, peeled & chopped",
+        "2 lb sweet potatoes, peeled & chopped",
+        "1 tart apple, peeled & chopped",
+        "Salt, pepper, garlic powder to taste"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "In a large pot or Dutch oven, melt the butter over medium heat. Cook the diced onions until they begin to soften.",
+        "Add the diced red bell pepper and cook for a few more minutes.",
+        "Stir in the curry powder and cook for one minute until fragrant.",
+        "Pour in the broth. Add the chopped carrots, sweet potatoes, and apple.",
+        "Bring to a boil, then reduce heat and simmer until all the vegetables are very soft.",
+        "Using an immersion blender (or carefully transferring in batches to a regular blender), blend the soup until completely puréed and smooth.",
+        "Season to taste with salt, pepper, garlic powder, and additional curry powder if desired.",
+        "Simmer briefly to allow flavors to meld. Serve hot, traditionally with a grilled cheese sandwich."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

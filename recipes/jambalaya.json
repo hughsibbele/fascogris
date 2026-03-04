@@ -1,0 +1,42 @@
+{
+  "slug": "jambalaya",
+  "title": "Jambalaya",
+  "yield": "6-8 servings",
+  "time": "",
+  "description": "A rich, flavorful one-pot meal with chicken, sausage, and the \"Holy Trinity\" of onion, bell pepper, and celery.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "2 Tbs. vegetable oil",
+        "1 lb boneless, skinless chicken thighs, cubed",
+        "1 lb andouille sausage, sliced",
+        "1 large onion, chopped",
+        "1 large green bell pepper, chopped",
+        "2 celery stalks, chopped",
+        "3 cloves garlic, minced",
+        "1 (14.5 oz) can diced tomatoes",
+        "4 cups chicken broth",
+        "1.5 cups long-grain white rice",
+        "1/2 cup chopped green onions & 1/2 cup chopped parsley",
+        "2 bay leaves, 1 tsp dried thyme, 1/2 tsp cayenne",
+        "Salt and black pepper"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Season and brown chicken in hot oil in a Dutch oven. Remove. Brown sausage. Remove.",
+        "Cook onion, bell pepper, and celery until soft. Add garlic for 1 minute.",
+        "Stir in tomatoes, broth, and seasonings. Bring to a boil.",
+        "Stir in rice. Return chicken and sausage to the pot. Return to a simmer.",
+        "Reduce heat to low, cover, and cook for 25-30 minutes until rice is tender. Do not stir.",
+        "Let stand, covered, for 10 minutes. Discard bay leaves, fluff with a fork, and stir in green onions and parsley."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "chicken-pot-pie",
+  "title": "Chicken Pot Pie",
+  "yield": "6-8 servings",
+  "time": "",
+  "description": "A classic comfort food, made easy with store-bought puff pastry or your favorite homemade topping.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "1½ pounds boneless, skinless chicken breasts and/or thighs",
+        "2 cups homemade chicken broth",
+        "1½ tbsp vegetable oil",
+        "1 medium-large onion, chopped",
+        "3 medium carrots, peeled and sliced",
+        "2 small celery ribs, sliced",
+        "Salt and ground black pepper",
+        "4 tbsp butter",
+        "1/2 cup all-purpose flour",
+        "1½ cups milk",
+        "1/2 tsp dried thyme leaves",
+        "3 tbsp dry sherry",
+        "1 cup frozen green peas, thawed",
+        "3 tbsp minced fresh parsley",
+        "Your choice of topping (pie dough, puff pastry, etc.)"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Prepare your topping and refrigerate. Preheat oven to 400°F.",
+        "In a Dutch oven, simmer chicken in broth until just done, 8-10 minutes. Remove chicken and shred; reserve broth.",
+        "Heat oil in the Dutch oven. Sauté onion, carrots, and celery until tender. Add to shredded chicken.",
+        "Melt butter in the Dutch oven. Add flour and cook for 1 minute. Whisk in reserved broth, milk, and thyme. Simmer until sauce thickens. Stir in sherry.",
+        "Pour sauce over chicken-vegetable mixture. Stir in peas and parsley. Adjust seasonings.",
+        "Pour into a 13x9-inch pan. Top as desired.",
+        "Bake until pastry is golden and filling is bubbly, 20-30 minutes."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

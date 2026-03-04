@@ -1,0 +1,45 @@
+{
+  "slug": "shepherds-pie",
+  "title": "Shepherd's Pie",
+  "yield": "6 servings",
+  "time": "1 hour 15 minutes",
+  "description": "The quintessential British and Irish comfort food. True Shepherd's Pie is made with ground lamb. A rich, savory meat and vegetable filling is topped with creamy mashed potatoes.",
+  "ingredients": [
+    {
+      "group": "For the Topping",
+      "items": [
+        "2 lbs Russet or Yukon Gold potatoes, peeled and cubed",
+        "1/2 cup whole milk, warm",
+        "4 tbsp unsalted butter",
+        "Salt, pepper, and optional Parmesan cheese"
+      ]
+    },
+    {
+      "group": "For the Filling",
+      "items": [
+        "2 tbsp olive oil & 1.5 lbs ground lamb",
+        "1 large onion, 2 carrots, 2 celery stalks, all diced",
+        "3 cloves garlic, minced",
+        "2 tbsp flour & 1 tbsp tomato paste",
+        "1 cup beef or lamb broth",
+        "1 tbsp Worcestershire sauce",
+        "1 tsp dried rosemary & 1 tsp dried thyme",
+        "1 cup frozen peas"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Topping: Boil potatoes until tender. Drain well. Mash with warm milk, butter, salt, pepper, and cheese.",
+        "Preheat oven to 400°F.",
+        "Filling: Heat oil, brown lamb. Drain fat. Add onion, carrots, celery; cook until soft. Add garlic.",
+        "Stir in flour, then tomato paste. Add broth, Worcestershire, and herbs. Simmer until gravy thickens. Stir in peas. Season.",
+        "Assemble & Bake: Spread filling in a baking dish. Top with mashed potatoes. Bake for 25-30 minutes until bubbly and golden. Rest 10-15 minutes."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

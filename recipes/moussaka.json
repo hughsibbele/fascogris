@@ -1,0 +1,46 @@
+{
+  "slug": "moussaka",
+  "title": "Moussaka",
+  "yield": "8 servings",
+  "time": "2 hours",
+  "description": "A famous Greek and Levantine casserole with layers of eggplant, a rich spiced meat sauce, and a creamy béchamel topping. Salting the eggplant is a crucial first step.",
+  "ingredients": [
+    {
+      "group": "For the Eggplant & Meat Sauce",
+      "items": [
+        "3 large eggplants, sliced",
+        "Salt & Olive oil",
+        "2 lbs ground lamb (or beef)",
+        "2 large onions, chopped & 5 cloves garlic, minced",
+        "1 cup dry red wine",
+        "1 (28 oz) can crushed tomatoes & 2 tbsp tomato paste",
+        "1 cinnamon stick, 1/2 tsp allspice, 1/4 tsp cloves, 2 bay leaves",
+        "1/2 cup chopped fresh parsley"
+      ]
+    },
+    {
+      "group": "For the Béchamel Sauce",
+      "items": [
+        "1 cup unsalted butter & 1 cup all-purpose flour",
+        "4 cups whole milk, warmed",
+        "Pinch of nutmeg",
+        "1 cup grated Kefalotyri or Parmesan cheese",
+        "2 egg yolks"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Eggplant: Salt eggplant slices and let drain for 1 hour. Rinse and pat dry. Fry or bake until golden.",
+        "Meat Sauce: Cook onions, then garlic, then lamb. Drain fat. Add wine, cook down. Add tomatoes and spices. Simmer, covered, for 1 hour until thick. Stir in parsley.",
+        "Béchamel: Melt butter, whisk in flour. Gradually whisk in warm milk until thick. Off heat, add nutmeg, cheese, and then egg yolks.",
+        "Assemble & Bake: Preheat oven to 375°F. In a 9x13 dish, layer half the eggplant, all the meat sauce, remaining eggplant, and top with béchamel.",
+        "Bake for 45-60 minutes until golden. Rest for 20-30 minutes before slicing."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "slug": "arroz-con-pollo",
+    "title": "Arroz con Pollo",
+    "yield": "6-8 servings",
+    "time": "45 minutes"
+  },
+  {
+    "slug": "beef-bourguignon",
+    "title": "Beef Bourguignon",
+    "yield": "6 servings",
+    "time": "3-4 hours (mostly inactive)"
+  },
+  {
+    "slug": "bulgarian-pepper-casserole",
+    "title": "Bulgarian Pepper Casserole",
+    "yield": "6-8 servings",
+    "time": "1.5 hours"
+  },
+  {
+    "slug": "chana-masala",
+    "title": "Chana Masala (Instant Pot)",
+    "yield": "6 servings",
+    "time": ""
+  },
+  {
+    "slug": "chicken-and-dumplings",
+    "title": "Chicken and Dumplings",
+    "yield": "6-8 servings",
+    "time": "2 hours"
+  },
+  {
+    "slug": "chicken-marbella",
+    "title": "Chicken Marbella",
+    "yield": "10+ portions",
+    "time": ""
+  },
+  {
+    "slug": "chicken-monterey",
+    "title": "Chicken Monterey",
+    "yield": "4 servings",
+    "time": ""
+  },
+  {
+    "slug": "chicken-pot-pie",
+    "title": "Chicken Pot Pie",
+    "yield": "6-8 servings",
+    "time": ""
+  },
+  {
+    "slug": "chicken-tikka-masala",
+    "title": "Chicken Tikka Masala (Instant Pot)",
+    "yield": "6 servings",
+    "time": ""
+  },
+  {
+    "slug": "coq-au-vin",
+    "title": "Coq au Vin",
+    "yield": "6 servings",
+    "time": "2.5 hours"
+  },
+  {
+    "slug": "crawfish-etouffe",
+    "title": "Crawfish Étouffé",
+    "yield": "6-8 servings",
+    "time": ""
+  },
+  {
+    "slug": "doro-wat",
+    "title": "Doro Wat (Ethiopian Chicken Stew)",
+    "yield": "6 servings",
+    "time": "2 hours"
+  },
+  {
+    "slug": "feijoada",
+    "title": "Feijoada (Brazilian Black Bean Stew)",
+    "yield": "8-10 servings",
+    "time": "3-4 hours, plus overnight soaking"
+  },
+  {
+    "slug": "gado-gado",
+    "title": "Gado Gado",
+    "yield": "6 servings",
+    "time": "1 hour"
+  },
+  {
+    "slug": "good-soup",
+    "title": "Good Soup",
+    "yield": "",
+    "time": ""
+  },
+  {
+    "slug": "greek-orzo-casserole",
+    "title": "Greek Orzo Casserole",
+    "yield": "",
+    "time": ""
+  },
+  {
+    "slug": "grilled-chicken-dijon",
+    "title": "Grilled Chicken with Dijon and Herb Marinade",
+    "yield": "4-6 servings",
+    "time": "15 mins + marinating"
+  },
+  {
+    "slug": "hughs-chili",
+    "title": "Hugh's Chili",
+    "yield": "A very large pot",
+    "time": "9-13 hours (mostly inactive)"
+  },
+  {
+    "slug": "hungarian-goulash",
+    "title": "Hungarian Goulash",
+    "yield": "6 servings",
+    "time": "3 hours"
+  },
+  {
+    "slug": "jambalaya",
+    "title": "Jambalaya",
+    "yield": "6-8 servings",
+    "time": ""
+  },
+  {
+    "slug": "japanese-curry",
+    "title": "Japanese Curry",
+    "yield": "6 servings",
+    "time": "1 hour"
+  },
+  {
+    "slug": "jollof-rice",
+    "title": "Jollof Rice (Ghanaian-Style)",
+    "yield": "6-8 servings",
+    "time": "1.5 hours"
+  },
+  {
+    "slug": "lasagna",
+    "title": "Lasagna",
+    "yield": "8 servings",
+    "time": ""
+  },
+  {
+    "slug": "mac-and-cheese",
+    "title": "Macaroni and Cheese for a Crowd",
+    "yield": "10-12 servings",
+    "time": ""
+  },
+  {
+    "slug": "moroccan-chicken-tagine",
+    "title": "Moroccan Chicken Tagine",
+    "yield": "4-6 servings",
+    "time": "1.5 hours"
+  },
+  {
+    "slug": "moussaka",
+    "title": "Moussaka",
+    "yield": "8 servings",
+    "time": "2 hours"
+  },
+  {
+    "slug": "pastitsio",
+    "title": "Pastitsio (Greek Pasta Bake)",
+    "yield": "8-10 servings",
+    "time": "1.5 hours"
+  },
+  {
+    "slug": "pork-and-ham-loaf",
+    "title": "Pork and Ham Loaf with Sweet Mustard Glaze",
+    "yield": "6-8 servings",
+    "time": ""
+  },
+  {
+    "slug": "pozole-rojo",
+    "title": "Pozole Rojo",
+    "yield": "8-10 servings",
+    "time": "3-4 hours"
+  },
+  {
+    "slug": "sausage-ragout",
+    "title": "Sausage Ragout",
+    "yield": "6 portions",
+    "time": ""
+  },
+  {
+    "slug": "shakshuka",
+    "title": "Shakshuka",
+    "yield": "4 servings",
+    "time": "30 minutes"
+  },
+  {
+    "slug": "sheet-pan-sausage-peppers",
+    "title": "Sheet Pan Sausage and Peppers",
+    "yield": "4 servings",
+    "time": "45 minutes"
+  },
+  {
+    "slug": "shepherds-pie",
+    "title": "Shepherd's Pie",
+    "yield": "6 servings",
+    "time": "1 hour 15 minutes"
+  },
+  {
+    "slug": "succotash",
+    "title": "Succotash",
+    "yield": "8 servings",
+    "time": ""
+  },
+  {
+    "slug": "tamale-pie",
+    "title": "Tamale Pie",
+    "yield": "6 servings",
+    "time": "1 hour 15 minutes"
+  },
+  {
+    "slug": "tomato-basil-butter-beans",
+    "title": "Tomato Basil Butter Beans",
+    "yield": "2 servings",
+    "time": "10 minutes"
+  },
+  {
+    "slug": "turkey-tetrazzini",
+    "title": "Turkey Tetrazzini",
+    "yield": "5-6 servings",
+    "time": ""
+  },
+  {
+    "slug": "white-chili",
+    "title": "White Chili",
+    "yield": "",
+    "time": ""
+  }
+]

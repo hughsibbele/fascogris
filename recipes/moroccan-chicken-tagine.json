@@ -1,0 +1,44 @@
+{
+  "slug": "moroccan-chicken-tagine",
+  "title": "Moroccan Chicken Tagine",
+  "yield": "4-6 servings",
+  "time": "1.5 hours",
+  "description": "This tagine balances sweet, savory, and tangy flavors with spices, apricots, and preserved lemons. A Dutch oven works perfectly.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "8 bone-in, skin-on chicken thighs",
+        "2 tsp ground cinnamon, 2 tsp ground ginger, 1 tsp turmeric",
+        "1 tsp salt, 1/2 tsp black pepper",
+        "2 tbsp olive oil",
+        "2 large red onions, thinly sliced",
+        "4 cloves garlic, minced",
+        "Large pinch of saffron threads",
+        "1 cup chicken stock",
+        "1 cup dried apricots, halved",
+        "1/2 cup pitted green or purple olives",
+        "1 preserved lemon, rind thinly sliced",
+        "2 tbsp honey",
+        "Garnish: 1/2 cup chopped cilantro, 1/4 cup toasted almonds",
+        "Cooked couscous, for serving"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Mix spices and rub all over chicken.",
+        "In a Dutch oven, heat oil and brown chicken on all sides. Set aside.",
+        "Cook onions until soft (10-15 mins). Add garlic and saffron for 1 minute.",
+        "Stir in chicken stock, scraping up browned bits.",
+        "Return chicken to pot. Add apricots, olives, preserved lemon, and drizzle with honey.",
+        "Simmer, covered, for 45-60 minutes until chicken is tender.",
+        "Serve hot over couscous, garnished with cilantro and almonds."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

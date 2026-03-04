@@ -1,0 +1,39 @@
+{
+  "slug": "pastitsio",
+  "title": "Pastitsio (Greek Pasta Bake)",
+  "yield": "8-10 servings",
+  "time": "1.5 hours",
+  "description": "Often called Greek Lasagna, Pastitsio is a layered baked pasta dish with a spiced meat sauce and a thick, creamy béchamel topping.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "1 lb Pastitsio pasta (or bucatini/ziti)",
+        "2 egg whites, beaten & 1/2 cup grated Parmesan",
+        "2 tbsp olive oil & 1.5 lbs ground beef",
+        "2 large onions, chopped & 3 cloves garlic, minced",
+        "1/2 cup dry red wine",
+        "1 (15 oz) can tomato sauce",
+        "1 cinnamon stick & 1/4 tsp ground cloves",
+        "1 cup butter & 1 cup flour",
+        "4 cups whole milk, warmed",
+        "Pinch of nutmeg & 2 egg yolks",
+        "1 cup grated Parmesan"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Meat Sauce: Cook onions, garlic, then beef. Drain fat. Add wine, cook down. Add tomato sauce and spices. Simmer 30 mins.",
+        "Pasta: Cook pasta 2 mins less than package directions. Drain. Toss with egg whites and 1/2 cup cheese.",
+        "Béchamel: Melt butter, whisk in flour. Gradually whisk in warm milk until thick. Off heat, add nutmeg, then egg yolks and 1 cup cheese.",
+        "Assemble & Bake: Preheat oven to 350°F. In a 9x13 dish, layer half the pasta, all the meat sauce, remaining pasta, and top with béchamel.",
+        "Bake for 45-50 minutes until golden. Rest 20 minutes before serving."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

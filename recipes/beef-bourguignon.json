@@ -1,0 +1,51 @@
+{
+  "slug": "beef-bourguignon",
+  "title": "Beef Bourguignon",
+  "yield": "6 servings",
+  "time": "3-4 hours (mostly inactive)",
+  "description": "This recipe is adapted from Julia Child's classic, the undisputed gold standard for this rustic French stew. The magic is in the slow cooking time, which tenderizes the beef and melds the flavors of the wine, stock, and aromatics into a deeply savory sauce. Do not rush the browning steps.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "6 ounces thick-cut bacon or pancetta, cut into lardons",
+        "3 lbs beef chuck, cut into 2-inch cubes",
+        "Salt and freshly ground black pepper",
+        "1 large carrot, sliced",
+        "1 large yellow onion, sliced",
+        "2 tbsp all-purpose flour",
+        "3 cups full-bodied, dry red wine (like a Burgundy, Côtes du Rhône, or Pinot Noir)",
+        "2-3 cups beef stock or broth",
+        "1 tbsp tomato paste",
+        "2 cloves garlic, smashed",
+        "1/2 tsp dried thyme",
+        "1 bay leaf",
+        "1 lb cremini mushrooms, quartered",
+        "18-24 whole pearl onions, peeled",
+        "3 tbsp unsalted butter",
+        "Fresh parsley, chopped, for garnish"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Preheat oven to 325°F (165°C).",
+        "In a large Dutch oven, cook the bacon over medium heat until crisp. Remove with a slotted spoon to a plate, leaving the rendered fat in the pot.",
+        "Pat the beef cubes thoroughly dry with paper towels (this is critical for browning). Season with salt and pepper. Brown the beef in batches in the hot bacon fat, ensuring not to crowd the pan. Set the browned beef aside with the bacon.",
+        "In the same pot, add the sliced carrot and onion. Cook until softened and lightly browned, about 10 minutes. Pour off any excess fat.",
+        "Return the beef and bacon to the pot. Sprinkle with flour and toss to coat. Place the uncovered pot in the oven for 4 minutes. Remove from oven, stir, and return to oven for another 4 minutes. This helps form a crust.",
+        "Remove pot from oven and place on stovetop. Stir in the red wine and enough beef stock to nearly cover the meat. Add the tomato paste, garlic, thyme, and bay leaf. Bring to a simmer on the stovetop.",
+        "Once simmering, cover the pot and transfer to the lower part of the preheated oven. Cook for 2.5 to 3 hours, until the meat is fork-tender.",
+        "While the stew cooks, prepare the vegetables. In a large skillet, melt 1.5 tbsp of butter over medium heat. Add the pearl onions and cook, stirring, until golden brown all over. Add 1/2 cup of beef stock, bring to a simmer, cover, and cook until tender, about 20-30 minutes. Remove onions and set aside.",
+        "In the same skillet, melt the remaining 1.5 tbsp of butter. Add the mushrooms and cook until browned and their liquid has evaporated. Set aside.",
+        "Once the beef is tender, strain the stew through a colander set over a large bowl. Return the beef and bacon to the Dutch oven. Add the cooked pearl onions and mushrooms.",
+        "Skim the fat from the surface of the sauce. Bring the sauce to a simmer in a saucepan and cook for a few minutes to thicken slightly. You should have about 2.5 cups. Season to taste with salt and pepper.",
+        "Pour the sauce over the meat and vegetables in the Dutch oven. Simmer on the stovetop for 2-3 minutes to heat through. Serve hot, garnished with fresh parsley, over egg noodles, potatoes, or crusty bread."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

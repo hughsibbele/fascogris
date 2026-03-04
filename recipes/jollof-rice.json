@@ -1,0 +1,44 @@
+{
+  "slug": "jollof-rice",
+  "title": "Jollof Rice (Ghanaian-Style)",
+  "yield": "6-8 servings",
+  "time": "1.5 hours",
+  "description": "A beloved one-pot dish across West Africa. The Ghanaian version is known for its use of fragrant rice and a deeply flavorful tomato stew base.",
+  "ingredients": [
+    {
+      "group": "For the Stew Base",
+      "items": [
+        "1 lb ripe plum tomatoes",
+        "1 large red onion & 1 red bell pepper",
+        "1-2 habanero peppers",
+        "1-inch piece of ginger & 3 cloves garlic",
+        "1/4 cup vegetable oil"
+      ]
+    },
+    {
+      "group": "For the Rice",
+      "items": [
+        "1/4 cup vegetable oil & 1 large red onion, chopped",
+        "1/4 cup tomato paste",
+        "3 cups Jasmine or Basmati rice, rinsed",
+        "4 cups chicken or vegetable broth",
+        "1 tsp curry powder, 1 tsp dried thyme, 2 bay leaves",
+        "Salt and white pepper to taste"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Make Stew Base: Blend tomatoes, onion, bell pepper, habanero, ginger, and garlic until smooth. Cook purée in hot oil for 20-25 minutes until reduced and darkened.",
+        "Start Jollof: In a large pot, heat oil and sauté chopped onion. Add tomato paste and cook, stirring, for 5 minutes.",
+        "Pour in the stew base and cook for 10 minutes. Add broth and seasonings. Bring to a rolling boil.",
+        "Cook Rice: Pour rinsed rice into the boiling liquid. Stir. Reduce heat to lowest setting, cover tightly (with foil under lid), and steam for 30 minutes.",
+        "Fluff rice with a fork, cover, and cook for another 10-15 minutes until done. Let stand 10 minutes before serving."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

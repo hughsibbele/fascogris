@@ -1,0 +1,7 @@
+[build]
+  command = "node scripts/build-index.js"
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"

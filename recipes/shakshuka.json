@@ -1,0 +1,40 @@
+{
+  "slug": "shakshuka",
+  "title": "Shakshuka",
+  "yield": "4 servings",
+  "time": "30 minutes",
+  "description": "A popular dish across the Middle East and North Africa of eggs poached in a flavorful tomato and pepper sauce. Perfect for any meal of the day.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "2 tbsp olive oil",
+        "1 large yellow onion, diced",
+        "1 red bell pepper, diced",
+        "3-4 cloves garlic, minced",
+        "1 tsp cumin, 1 tsp smoked paprika, 1/4 tsp cayenne",
+        "1 (28 oz) can whole peeled tomatoes, crushed by hand",
+        "Salt and black pepper",
+        "4-6 large eggs",
+        "1/2 cup crumbled feta cheese",
+        "1/4 cup chopped fresh cilantro or parsley",
+        "Crusty bread or pita, for serving"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Heat oil in a large skillet. Cook onion and bell pepper until soft (8-10 mins).",
+        "Stir in garlic and spices; cook for 1 minute.",
+        "Pour in crushed tomatoes. Season. Simmer for 10-15 minutes until sauce thickens.",
+        "Make wells in the sauce. Crack an egg into each well.",
+        "Cover and cook on low for 5-8 minutes, until egg whites are set but yolks are runny.",
+        "Remove from heat. Sprinkle with feta and cilantro. Serve immediately from the skillet with bread."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}

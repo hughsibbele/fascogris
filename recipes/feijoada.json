@@ -1,0 +1,39 @@
+{
+  "slug": "feijoada",
+  "title": "Feijoada (Brazilian Black Bean Stew)",
+  "yield": "8-10 servings",
+  "time": "3-4 hours, plus overnight soaking",
+  "description": "The national dish of Brazil, a rich stew of black beans and various salted, smoked, and fresh meats. Serve with rice, collard greens, orange slices, and farofa.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "1 lb dried black beans",
+        "1/2 lb carne seca (dried, salted beef)",
+        "1/2 lb salted pork ribs",
+        "1 lb fresh pork sausage (linguica or kielbasa)",
+        "1/2 lb smoked sausage (andouille)",
+        "1 large smoked pork hock",
+        "2 tbsp olive oil",
+        "2 large onions, chopped",
+        "8 cloves garlic, minced",
+        "2 bay leaves",
+        "Water, Salt, and black pepper"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Prep: The day before, soak beans, carne seca, and salted ribs in separate bowls of water overnight.",
+        "Initial Cook: Drain beans and salted meats. Place in a very large pot with the pork hock. Cover with 3 inches of water. Bring to a boil, skim foam, then simmer for 1.5-2 hours until tenderizing.",
+        "Sauté Aromatics: In a skillet, heat oil and brown the fresh and smoked sausages. Remove sausages. In the same skillet, cook onions until soft, then add garlic for 1 minute.",
+        "Combine & Simmer: Add browned sausages and onion/garlic mixture to the bean pot. Add bay leaves. Simmer for another 1-1.5 hours until beans are creamy and meats are fork-tender.",
+        "Finish: Remove large meat pieces, chop or shred, and return to the pot. Season to taste. Serve hot with traditional accompaniments."
+      ]
+    }
+  ],
+  "source": "",
+  "dateAdded": "2026-03-04"
+}
