@@ -1,0 +1,46 @@
+{
+  "slug": "spinach-berry-garlic-scape-salad",
+  "title": "Spinach, Berry & Garlic Scape Salad",
+  "yield": "serves 2",
+  "time": "~15 min active, ~25 min total",
+  "description": "Spinach and lettuce with macerated strawberries, whole blackberries, peppery radishes, crumbled goat cheese, and toasted slivered almonds, dressed in a mellowed garlic scape-lemon-honey vinaigrette.",
+  "ingredients": [
+    {
+      "group": null,
+      "items": [
+        "3 cups baby spinach",
+        "2 cups lettuce, torn",
+        "6 strawberries, hulled and sliced",
+        "1/2 cup blackberries, whole",
+        "4 small radishes, thinly sliced",
+        "3 garlic scapes",
+        "1 1/2 lemons (juice + a little zest)",
+        "3 tbsp olive oil",
+        "1-2 tsp honey",
+        "2 oz soft goat cheese, crumbled",
+        "1/4 cup slivered almonds",
+        "1/4 tsp salt, plus a finishing pinch",
+        "1/4 tsp black pepper"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "group": null,
+      "items": [
+        "Macerate the strawberries: Toss the sliced strawberries with a pinch of salt and a small squeeze of lemon. Let them sit while you do everything else; they soften and release a syrup you'll fold into the dressing.",
+        "Toast the almonds: Toast the slivered almonds in a dry pan over medium heat, shaking often, until golden and fragrant. Tip them onto a plate right away so they stop cooking.",
+        "Blanch the scapes: Drop the garlic scapes into boiling water for 45 seconds, then plunge into ice water. This keeps their garlicky snap but removes the raw edge. Pat dry and mince finely.",
+        "Make the vinaigrette: Whisk the minced scapes with the juice of 1 1/2 lemons, a little zest, the olive oil, honey, salt, and pepper. Pour off the strawberry syrup from step 1 and whisk it in — it rounds out the acid and helps the dressing emulsify.",
+        "Crisp the radishes: Soak the sliced radishes in cold water with a pinch of salt and a few drops of lemon. They firm up and lose any bitter edge. Drain before plating.",
+        "Prep the greens: Wash the spinach and lettuce, then dry thoroughly with a salad spinner or clean towel. Wet greens won't hold dressing.",
+        "Assemble and finish: Toss the greens with most of the vinaigrette. Plate, then scatter the macerated strawberries, drained radishes, and whole blackberries on top. Crumble the goat cheese over in clumps (don't toss it in, or it smears the greens), shower with the toasted almonds, drizzle the remaining dressing, and finish with flaky salt and cracked pepper."
+      ]
+    }
+  ],
+  "source": "Claude",
+  "tags": [
+    "vegetarian"
+  ],
+  "dateAdded": "2026-06-08"
+}
