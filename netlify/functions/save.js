@@ -48,6 +48,28 @@ exports.handler = async (event) => {
       throw new Error(err);
     }
 
+    // Best-effort Cloudflare cache purge so the new recipe shows up without
+    // waiting for the 4-hour edge TTL. Failures are logged but don't fail the save.
+    const cfToken = process.env.CLOUDFLARE_API_TOKEN;
+    const cfZone = process.env.CLOUDFLARE_ZONE_ID;
+    if (cfToken && cfZone) {
+      try {
+        const purgeRes = await fetch(`https://api.cloudflare.com/client/v4/zones/${cfZone}/purge_cache`, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${cfToken}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ purge_everything: true }),
+        });
+        if (!purgeRes.ok) {
+          console.error('CF purge failed:', purgeRes.status, await purgeRes.text());
+        }
+      } catch (e) {
+        console.error('CF purge threw:', e.message);
+      }
+    }
+
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
