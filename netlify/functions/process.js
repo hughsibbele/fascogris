@@ -1,72 +1,122 @@
-const Anthropic = require('@anthropic-ai/sdk');
+// Extracts a recipe from a photo or a web page using Claude.
+// Requires the family password so the endpoint can't be used to run up API spend.
+const { ALL_TAGS } = require('../../js/shared.js');
 
-const SYSTEM_PROMPT = `You extract recipes from images or web pages and return structured JSON.
-Return ONLY valid JSON matching this schema (no markdown, no explanation):
-{
-  "title": "string",
-  "yield": "string or empty",
-  "time": "string or empty",
-  "description": "string or empty",
-  "ingredients": [{ "group": "string or null", "items": ["string"] }],
-  "instructions": [{ "group": "string or null", "items": ["string"] }],
-  "source": "string or empty",
-  "tags": ["string"]
+const MODEL = 'claude-opus-5';
+
+const GROUPED_LIST = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      group: { type: ['string', 'null'], description: 'Sub-heading, or null when there is none' },
+      items: { type: 'array', items: { type: 'string' } },
+    },
+    required: ['group', 'items'],
+    additionalProperties: false,
+  },
+};
+
+const RECIPE_SCHEMA = {
+  type: 'object',
+  properties: {
+    title: { type: 'string' },
+    yield: { type: 'string', description: 'e.g. "6 servings"; empty string if unknown' },
+    time: { type: 'string', description: 'e.g. "45 minutes"; empty string if unknown' },
+    description: { type: 'string', description: 'One or two sentences; empty string if none' },
+    ingredients: GROUPED_LIST,
+    instructions: GROUPED_LIST,
+    source: { type: 'string', description: 'Book, site, or person; empty string if unknown' },
+    tags: { type: 'array', items: { type: 'string', enum: ALL_TAGS } },
+  },
+  required: ['title', 'yield', 'time', 'description', 'ingredients', 'instructions', 'source', 'tags'],
+  additionalProperties: false,
+};
+
+const SYSTEM_PROMPT = `You extract recipes from photos or web pages into structured data for a family recipe site.
+Keep ingredient and instruction text clean and concise, one ingredient or step per item.
+Use a group heading only when the source clearly has sub-sections (e.g. "For the sauce").
+Pick every tag that genuinely applies from the allowed list; leave tags empty if none do.`;
+
+function stripHtml(html) {
+  return html
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 30000);
 }
-Use null for group when there's no subgroup. Keep ingredient/instruction text clean and concise.
-For "tags", pick ALL that apply from this exact list: vegetarian, quick, one-pot, sheet-pan, instant-pot, slow-cook, soup/stew, pasta, rice, curry, casserole, crowd-pleaser.`;
 
-exports.handler = async (event) => {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method not allowed' };
-  }
+function createHandler({ anthropic, password, fetchImpl = globalThis.fetch }) {
+  return async (event) => {
+    if (event.httpMethod !== 'POST') {
+      return { statusCode: 405, body: 'Method not allowed' };
+    }
 
-  const { type, data } = JSON.parse(event.body);
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+    let payload;
+    try { payload = JSON.parse(event.body || '{}'); } catch (e) { return { statusCode: 400, body: 'Bad JSON' }; }
+    const { type, data, password: given } = payload;
 
-  try {
+    if (!password || given !== password) {
+      return { statusCode: 401, body: 'Wrong password' };
+    }
+
     let content;
     if (type === 'photo') {
       content = [
         { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data } },
-        { type: 'text', text: 'Extract the recipe from this image. Return JSON only.' },
+        { type: 'text', text: 'Extract the recipe from this image.' },
       ];
     } else if (type === 'url') {
-      // Fetch the URL server-side
-      const res = await fetch(data);
+      const res = await fetchImpl(data);
       const html = await res.text();
-      // Send a trimmed version to Claude
-      const trimmed = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-        .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-        .replace(/<[^>]+>/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim()
-        .slice(0, 15000);
       content = [
-        { type: 'text', text: `Extract the recipe from this web page content. Source URL: ${data}\n\n${trimmed}\n\nReturn JSON only.` },
+        { type: 'text', text: `Extract the recipe from this web page. Source URL: ${data}\n\n${stripHtml(html)}` },
       ];
     } else {
       return { statusCode: 400, body: 'Invalid type' };
     }
 
-    const msg = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 2000,
-      system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content }],
+    try {
+      const msg = await anthropic.messages.create({
+        model: MODEL,
+        max_tokens: 8000,
+        system: SYSTEM_PROMPT,
+        messages: [{ role: 'user', content }],
+        output_config: { format: { type: 'json_schema', schema: RECIPE_SCHEMA } },
+      });
+
+      if (msg.stop_reason === 'refusal') {
+        return { statusCode: 422, body: 'Claude declined to process this input' };
+      }
+      const textBlock = msg.content.find(b => b.type === 'text');
+      if (!textBlock) throw new Error('No text in model response');
+      const recipe = JSON.parse(textBlock.text);
+      if (!recipe.source && type === 'url') recipe.source = data;
+
+      return {
+        statusCode: 200,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(recipe),
+      };
+    } catch (e) {
+      console.error(e);
+      return { statusCode: 500, body: `Processing failed: ${e.message}` };
+    }
+  };
+}
+
+let defaultHandler;
+exports.handler = (event) => {
+  if (!defaultHandler) {
+    const Anthropic = require('@anthropic-ai/sdk');
+    defaultHandler = createHandler({
+      anthropic: new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY }),
+      password: process.env.SITE_PASSWORD,
     });
-
-    const text = msg.content[0].text.trim();
-    // Extract JSON from possible markdown fences
-    const jsonStr = text.replace(/^```json?\n?/, '').replace(/\n?```$/, '');
-    const recipe = JSON.parse(jsonStr);
-
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(recipe),
-    };
-  } catch (e) {
-    console.error(e);
-    return { statusCode: 500, body: `Processing failed: ${e.message}` };
   }
+  return defaultHandler(event);
 };
+exports.createHandler = createHandler;
+exports.MODEL = MODEL;

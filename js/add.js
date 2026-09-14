@@ -1,9 +1,5 @@
 (() => {
-  const ALL_TAGS = [
-    'vegetarian', 'quick', 'one-pot', 'sheet-pan', 'instant-pot',
-    'slow-cook', 'soup/stew', 'pasta', 'rice', 'curry', 'casserole',
-    'crowd-pleaser'
-  ];
+  const { ALL_TAGS, slugify, groupsToText, textToGroups, waitForPublished } = FG;
 
   // Tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -26,12 +22,23 @@
     photoSubmit.disabled = !photoInput.files.length;
   });
 
-  function showStatus(msg, type) {
-    statusEl.textContent = msg;
+  function showStatus(html, type) {
+    statusEl.innerHTML = html;
     statusEl.className = `status-msg ${type}`;
     statusEl.style.display = 'block';
   }
   function hideStatus() { statusEl.style.display = 'none'; }
+
+  // The family password gates both AI processing and saving. Remembered per tab session.
+  function getPassword() {
+    let pw = sessionStorage.getItem('fg_pw');
+    if (!pw) {
+      pw = prompt('Family password:');
+      if (pw) sessionStorage.setItem('fg_pw', pw);
+    }
+    return pw;
+  }
+  function forgetPassword() { sessionStorage.removeItem('fg_pw'); }
 
   // Render tag checkboxes
   function renderTagCheckboxes(selectedTags) {
@@ -71,47 +78,43 @@
     });
   }
 
-  // Process photo
+  // Send a photo or URL to the process function and show the result for editing.
+  async function processWith(body, label) {
+    const password = getPassword();
+    if (!password) return;
+    showStatus(label, 'loading');
+    try {
+      const res = await fetch('/.netlify/functions/process', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...body, password }),
+      });
+      if (res.status === 401) {
+        forgetPassword();
+        throw new Error('Wrong password');
+      }
+      if (!res.ok) throw new Error(await res.text());
+      const recipe = await res.json();
+      showPreview(recipe);
+      hideStatus();
+    } catch (e) {
+      showStatus(`Error: ${e.message}`, 'error');
+    }
+  }
+
   photoSubmit.addEventListener('click', async () => {
     const file = photoInput.files[0];
     if (!file) return;
     showStatus('Resizing image…', 'loading');
     const dataUrl = await resizeImage(file);
     const base64 = dataUrl.split(',')[1];
-    showStatus('Processing recipe from photo…', 'loading');
-    try {
-      const res = await fetch('/.netlify/functions/process', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'photo', data: base64 }),
-      });
-      if (!res.ok) throw new Error(await res.text());
-      const recipe = await res.json();
-      showPreview(recipe);
-      hideStatus();
-    } catch (e) {
-      showStatus(`Error: ${e.message}`, 'error');
-    }
+    await processWith({ type: 'photo', data: base64 }, 'Reading the recipe from your photo… this takes about 20 seconds.');
   });
 
-  // Process URL
   document.getElementById('url-submit').addEventListener('click', async () => {
     const url = document.getElementById('url-input').value.trim();
     if (!url) return;
-    showStatus('Processing recipe from URL…', 'loading');
-    try {
-      const res = await fetch('/.netlify/functions/process', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'url', data: url }),
-      });
-      if (!res.ok) throw new Error(await res.text());
-      const recipe = await res.json();
-      showPreview(recipe);
-      hideStatus();
-    } catch (e) {
-      showStatus(`Error: ${e.message}`, 'error');
-    }
+    await processWith({ type: 'url', data: url }, 'Reading the recipe from that page… this takes about 20 seconds.');
   });
 
   // Manual form
@@ -130,33 +133,6 @@
     };
     showPreview(recipe);
   });
-
-  // Serialize grouped items to textarea: "## Group\nitem\nitem"
-  function groupsToText(groups) {
-    return groups.map(g => {
-      const lines = [];
-      if (g.group) lines.push(`## ${g.group}`);
-      lines.push(...g.items);
-      return lines.join('\n');
-    }).join('\n');
-  }
-
-  // Parse textarea back to groups
-  function textToGroups(text) {
-    const lines = text.split('\n').map(s => s.trim()).filter(Boolean);
-    const groups = [];
-    let current = { group: null, items: [] };
-    for (const line of lines) {
-      if (line.startsWith('## ')) {
-        if (current.items.length || current.group) groups.push(current);
-        current = { group: line.slice(3).trim(), items: [] };
-      } else {
-        current.items.push(line);
-      }
-    }
-    if (current.items.length || current.group) groups.push(current);
-    return groups.length ? groups : [{ group: null, items: [] }];
-  }
 
   function showPreview(recipe) {
     previewEl.style.display = 'block';
@@ -179,20 +155,16 @@
   // Save
   previewForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    // Prompt for password if we don't have it
-    let password = sessionStorage.getItem('fg_pw');
-    if (!password) {
-      password = prompt('Family password:');
-      if (!password) return;
-    }
+    const password = getPassword();
+    if (!password) return;
 
     const fd = new FormData(previewForm);
     const title = fd.get('title').trim();
-    const slug = title.toLowerCase()
-      .replace(/['']/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '');
+    const slug = slugify(title);
+    if (!slug) {
+      showStatus('Error: the title needs at least one letter or number.', 'error');
+      return;
+    }
 
     const recipe = {
       slug,
@@ -205,24 +177,31 @@
       source: fd.get('source').trim(),
       tags: getSelectedTags(),
       dateAdded: new Date().toISOString().slice(0, 10),
-      password,
     };
+    const expected = JSON.stringify(recipe);
 
     showStatus('Saving recipe…', 'loading');
     try {
       const res = await fetch('/.netlify/functions/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(recipe),
+        body: JSON.stringify({ ...recipe, password }),
       });
       if (res.status === 401) {
-        sessionStorage.removeItem('fg_pw');
+        forgetPassword();
         throw new Error('Wrong password');
       }
       if (!res.ok) throw new Error(await res.text());
-      sessionStorage.setItem('fg_pw', password);
-      showStatus('Saved! Redirecting…', 'success');
-      setTimeout(() => { location.href = `recipe.html?r=${slug}`; }, 1000);
+
+      const recipeUrl = `recipe.html?r=${encodeURIComponent(slug)}`;
+      showStatus('Saved! Publishing to the site… this usually takes about a minute.', 'loading');
+      const published = await waitForPublished(fetch, `recipes/${slug}.json`, r => JSON.stringify(r) === expected);
+      if (published) {
+        showStatus('Published! Opening the recipe…', 'success');
+        location.href = recipeUrl;
+      } else {
+        showStatus(`Saved, but publishing is taking longer than usual. It will appear shortly at <a href="${recipeUrl}">the recipe page</a>.`, 'success');
+      }
     } catch (e) {
       showStatus(`Error saving: ${e.message}`, 'error');
     }

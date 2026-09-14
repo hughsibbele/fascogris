@@ -468,3 +468,12 @@ body.cook-mode .recipe-section ul li {
   .recipe-header h2 { font-size: 1.4rem; }
   .recipe-list a { padding: 0.6rem 0; }
 }
+.btn-delete {
+  float: right;
+  color: var(--brick);
+}
+.btn-delete.btn-danger {
+  background: var(--brick);
+  color: #fff;
+}
+.status-msg a { text-decoration: underline; }

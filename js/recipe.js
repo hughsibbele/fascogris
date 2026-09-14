@@ -1,4 +1,6 @@
 (() => {
+  const { ALL_TAGS, escapeHtml, groupsToText, textToGroups, waitForPublished, waitForGone } = FG;
+
   const slug = new URLSearchParams(location.search).get('r');
   if (!slug) { location.href = '/'; return; }
 
@@ -10,15 +12,10 @@
   const editForm = document.getElementById('edit-form');
   const editStatus = document.getElementById('edit-status');
   const editTagsEl = document.getElementById('edit-tags');
+  const deleteBtn = document.getElementById('delete-btn');
   let wakeLock = null;
   let currentRecipe = null;
   let savedPassword = '';
-
-  const ALL_TAGS = [
-    'vegetarian', 'quick', 'one-pot', 'sheet-pan', 'instant-pot',
-    'slow-cook', 'soup/stew', 'pasta', 'rice', 'curry', 'casserole',
-    'crowd-pleaser'
-  ];
 
   function renderEditTags(selectedTags) {
     const selected = new Set(selectedTags || []);
@@ -31,71 +28,46 @@
     return Array.from(editTagsEl.querySelectorAll('input:checked')).map(cb => cb.value);
   }
 
-  fetch(`recipes/${slug}.json`)
+  function setEditStatus(html, type) {
+    editStatus.innerHTML = html;
+    editStatus.className = `status-msg ${type}`;
+    editStatus.style.display = 'block';
+  }
+
+  fetch(`recipes/${encodeURIComponent(slug)}.json`)
     .then(res => { if (!res.ok) throw new Error(); return res.json(); })
     .then(r => { currentRecipe = r; render(r); })
     .catch(() => { content.innerHTML = '<p>Recipe not found.</p>'; });
 
-  // --- Group helpers (shared with add.js) ---
-  function groupsToText(groups) {
-    return groups.map(g => {
-      const lines = [];
-      if (g.group) lines.push(`## ${g.group}`);
-      lines.push(...g.items);
-      return lines.join('\n');
-    }).join('\n');
-  }
-
-  function textToGroups(text) {
-    const lines = text.split('\n').map(s => s.trim()).filter(Boolean);
-    const groups = [];
-    let current = { group: null, items: [] };
-    for (const line of lines) {
-      if (line.startsWith('## ')) {
-        if (current.items.length || current.group) groups.push(current);
-        current = { group: line.slice(3).trim(), items: [] };
-      } else {
-        current.items.push(line);
-      }
-    }
-    if (current.items.length || current.group) groups.push(current);
-    return groups.length ? groups : [{ group: null, items: [] }];
-  }
-
   // --- Render recipe ---
+  function groupedList(groups, tag) {
+    return (groups || []).map(g => {
+      const label = g.group ? `<h4>${escapeHtml(g.group)}</h4>` : '';
+      const items = (g.items || []).map(i => `<li>${escapeHtml(i)}</li>`).join('');
+      return `${label}<${tag}>${items}</${tag}>`;
+    }).join('');
+  }
+
   function render(r) {
     document.title = `${r.title} — fascogris`;
 
     const meta = [r.yield, r.time].filter(Boolean);
     const metaHtml = meta.length
-      ? `<div class="recipe-meta">${meta.map(m => `<span>${m}</span>`).join('')}</div>`
+      ? `<div class="recipe-meta">${meta.map(m => `<span>${escapeHtml(m)}</span>`).join('')}</div>`
       : '';
     const tagsHtml = r.tags && r.tags.length
-      ? `<div class="recipe-tags">${r.tags.map(t => `<span class="tag-pill-sm">${t}</span>`).join('')}</div>`
+      ? `<div class="recipe-tags">${r.tags.map(t => `<span class="tag-pill-sm">${escapeHtml(t)}</span>`).join('')}</div>`
       : '';
     const descHtml = r.description
-      ? `<p class="recipe-description">${r.description}</p>`
+      ? `<p class="recipe-description">${escapeHtml(r.description)}</p>`
       : '';
-
-    const ingHtml = r.ingredients.map(g => {
-      const label = g.group ? `<h4>${g.group}</h4>` : '';
-      const items = g.items.map(i => `<li>${i}</li>`).join('');
-      return `${label}<ul>${items}</ul>`;
-    }).join('');
-
-    const insHtml = r.instructions.map(g => {
-      const label = g.group ? `<h4>${g.group}</h4>` : '';
-      const items = g.items.map(i => `<li>${i}</li>`).join('');
-      return `${label}<ol>${items}</ol>`;
-    }).join('');
-
     const sourceHtml = r.source
-      ? `<p class="recipe-source">Source: ${r.source}</p>`
+      ? `<p class="recipe-source">Source: ${escapeHtml(r.source)}</p>`
       : '';
 
     content.innerHTML = `
       <div class="recipe-header">
-        <h2>${r.title}</h2>
+        <h2>${escapeHtml(r.title)}</h2>
         ${metaHtml}
         ${tagsHtml}
       </div>
@@ -103,11 +75,11 @@
       <div class="recipe-body">
         <div class="recipe-section">
           <h3>Ingredients</h3>
-          ${ingHtml}
+          ${groupedList(r.ingredients, 'ul')}
         </div>
         <div class="recipe-section">
           <h3>Instructions</h3>
-          ${insHtml}
+          ${groupedList(r.instructions, 'ol')}
         </div>
       </div>
       ${sourceHtml}
@@ -116,7 +88,6 @@
 
     toggle.style.display = 'block';
 
-    // Edit button handler
     document.getElementById('edit-btn').addEventListener('click', () => {
       editSection.style.display = 'block';
       if (savedPassword) {
@@ -136,7 +107,6 @@
     showEditForm();
   });
 
-  // Also allow Enter key in password field
   document.getElementById('edit-password').addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -156,13 +126,23 @@
     editForm.instructions.value = groupsToText(r.instructions || []);
     editForm.source.value = r.source || '';
     renderEditTags(r.tags);
+    resetDeleteButton();
   }
 
-  document.getElementById('edit-cancel').addEventListener('click', () => {
+  function closeEditor() {
     editSection.style.display = 'none';
     editFormWrap.style.display = 'none';
     editStatus.style.display = 'none';
-  });
+    resetDeleteButton();
+  }
+
+  document.getElementById('edit-cancel').addEventListener('click', closeEditor);
+
+  function handleAuthFailure() {
+    savedPassword = '';
+    editGate.style.display = 'block';
+    editFormWrap.style.display = 'none';
+  }
 
   editForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -179,35 +159,71 @@
       source: fd.get('source').trim(),
       tags: getEditTags(),
       dateAdded: currentRecipe.dateAdded,
-      password: savedPassword,
     };
+    const expected = JSON.stringify(recipe);
 
-    editStatus.textContent = 'Saving…';
-    editStatus.className = 'status-msg loading';
-    editStatus.style.display = 'block';
-
+    setEditStatus('Saving…', 'loading');
     try {
       const res = await fetch('/.netlify/functions/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(recipe),
+        body: JSON.stringify({ ...recipe, password: savedPassword }),
       });
-      if (res.status === 401) {
-        savedPassword = '';
-        throw new Error('Wrong password');
-      }
+      if (res.status === 401) throw new Error('Wrong password');
       if (!res.ok) throw new Error(await res.text());
 
-      editStatus.textContent = 'Saved! Reloading…';
-      editStatus.className = 'status-msg success';
-      setTimeout(() => location.reload(), 1000);
-    } catch (e) {
-      editStatus.textContent = `Error: ${e.message}`;
-      editStatus.className = 'status-msg error';
-      if (e.message === 'Wrong password') {
-        editGate.style.display = 'block';
-        editFormWrap.style.display = 'none';
+      setEditStatus('Saved! Publishing to the site… this usually takes about a minute.', 'loading');
+      const published = await waitForPublished(fetch, `recipes/${encodeURIComponent(recipe.slug)}.json`, r => JSON.stringify(r) === expected);
+      if (published) {
+        currentRecipe = recipe;
+        render(recipe);
+        closeEditor();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        setEditStatus('Saved, but publishing is taking longer than usual. Reload in a minute to see the changes.', 'success');
       }
+    } catch (e) {
+      setEditStatus(`Error: ${e.message}`, 'error');
+      if (e.message === 'Wrong password') handleAuthFailure();
+    }
+  });
+
+  // --- Delete flow: two clicks, no browser dialog ---
+  let deleteArmed = false;
+  let deleteTimer = null;
+
+  function resetDeleteButton() {
+    deleteArmed = false;
+    clearTimeout(deleteTimer);
+    deleteBtn.textContent = 'Delete Recipe';
+    deleteBtn.classList.remove('btn-danger');
+  }
+
+  deleteBtn.addEventListener('click', async () => {
+    if (!deleteArmed) {
+      deleteArmed = true;
+      deleteBtn.textContent = 'Really delete? Click again';
+      deleteBtn.classList.add('btn-danger');
+      deleteTimer = setTimeout(resetDeleteButton, 6000);
+      return;
+    }
+    resetDeleteButton();
+    setEditStatus('Deleting…', 'loading');
+    try {
+      const res = await fetch('/.netlify/functions/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug: currentRecipe.slug, password: savedPassword }),
+      });
+      if (res.status === 401) throw new Error('Wrong password');
+      if (!res.ok) throw new Error(await res.text());
+
+      setEditStatus('Deleted. Removing from the site… this usually takes about a minute.', 'loading');
+      await waitForGone(fetch, `recipes/${encodeURIComponent(currentRecipe.slug)}.json`);
+      location.href = '/';
+    } catch (e) {
+      setEditStatus(`Error: ${e.message}`, 'error');
+      if (e.message === 'Wrong password') handleAuthFailure();
     }
   });
 
@@ -218,7 +234,7 @@
     cookMode = !cookMode;
     document.body.classList.toggle('cook-mode', cookMode);
     toggle.classList.toggle('active', cookMode);
-    toggle.textContent = cookMode ? 'Cook Mode \u2713' : 'Cook Mode';
+    toggle.textContent = cookMode ? 'Cook Mode ✓' : 'Cook Mode';
 
     if (cookMode) {
       await acquireWakeLock();

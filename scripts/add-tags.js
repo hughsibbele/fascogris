@@ -2,11 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
-const TAGS = [
-  'vegetarian', 'quick', 'one-pot', 'sheet-pan', 'instant-pot',
-  'slow-cook', 'soup/stew', 'pasta', 'rice', 'curry', 'casserole',
-  'crowd-pleaser'
-];
+const { ALL_TAGS: TAGS } = require('../js/shared.js');
 
 const recipesDir = path.join(__dirname, '..', 'recipes');
 

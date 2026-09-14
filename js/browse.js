@@ -1,16 +1,10 @@
 (() => {
+  const { ALL_TAGS, escapeHtml } = FG;
   const listEl = document.getElementById('recipe-list');
   const searchEl = document.getElementById('search');
   const tagBarEl = document.getElementById('tag-bar');
   let recipes = [];
-  let fuse;
   let activeTags = new Set();
-
-  const ALL_TAGS = [
-    'vegetarian', 'quick', 'one-pot', 'sheet-pan', 'instant-pot',
-    'slow-cook', 'soup/stew', 'pasta', 'rice', 'curry', 'casserole',
-    'crowd-pleaser'
-  ];
 
   function renderTagBar() {
     tagBarEl.innerHTML = ALL_TAGS.map(tag =>
@@ -33,7 +27,7 @@
 
   function tagsHtml(tags) {
     if (!tags || !tags.length) return '';
-    return `<div class="recipe-tags">${tags.map(t => `<span class="tag-pill-sm">${t}</span>`).join('')}</div>`;
+    return `<div class="recipe-tags">${tags.map(t => `<span class="tag-pill-sm">${escapeHtml(t)}</span>`).join('')}</div>`;
   }
 
   function render(items) {
@@ -43,10 +37,10 @@
     }
     listEl.innerHTML = items.map(r => {
       const meta = [r.yield, r.time].filter(Boolean).join(' · ');
-      return `<li><a href="recipe.html?r=${r.slug}">
+      return `<li><a href="recipe.html?r=${encodeURIComponent(r.slug)}">
         <div class="title-row">
-          <span class="title">${r.title}</span>
-          ${meta ? `<span class="meta">${meta}</span>` : ''}
+          <span class="title">${escapeHtml(r.title)}</span>
+          ${meta ? `<span class="meta">${escapeHtml(meta)}</span>` : ''}
         </div>
         ${tagsHtml(r.tags)}
       </a></li>`;
@@ -77,7 +71,6 @@
     .then(res => res.json())
     .then(data => {
       recipes = data;
-      fuse = new Fuse(recipes, { keys: ['title', 'tags'], threshold: 0.35 });
       renderTagBar();
       render(recipes);
     });

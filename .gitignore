@@ -6,3 +6,6 @@ AOK/
 
 # Local Netlify folder
 .netlify
+
+# Generated at build time by scripts/build-index.js
+recipes-index.json
